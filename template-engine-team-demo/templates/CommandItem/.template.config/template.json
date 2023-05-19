@@ -1,0 +1,45 @@
+{
+  "$schema": "http://json.schemastore.org/template",
+  "$comment": "See https://aka.ms/template-json-reference for complete configuration description. Complete TODOs below and remove the $comment properties. It is recommended to use the JSON editor that supports schema hints to get more information about defined JSON properties and their description.",
+  "author": "Demo Author",
+  "classifications": [
+    "Demo"
+  ],
+  "name": "Real Console App: Command",
+  "description": "Adds new command to CLI app.",
+  "identity": "Demo.Real.Console.Command.CSharp",
+  "shortName": "command-item",
+  "tags": {
+    "language": "C#",
+    "type": "item"
+  },
+  "sourceName": "Template",
+  "preferDefaultName": true,
+  "symbols": {
+    "DefaultNamespace": {
+      "type": "bind",
+      "binding": "msbuild:RootNamespace",
+      "replaces": "DefaultNamespace"
+    },
+    "OptionName": {
+      "type": "parameter",
+      "datatype": "text",
+      "description": "The option name.",
+      "defaultValue": "Sample",
+      "replaces": "Sample",
+      "displayName": "The option name",
+      "forms": {
+        "global":[
+          "identity",
+          "lowerCaseInvariant"
+        ]
+      }
+    }
+  },
+  "constraints": {
+    "csharp-only": {
+      "type": "project-capability",
+      "args": "CSharp"
+    }
+  }
+}

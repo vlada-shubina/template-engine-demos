@@ -1,0 +1,42 @@
+{
+  "$schema": "https://json.schemastore.org/template.json",
+  "author": "Demo Asset",
+  "classifications": [ "Demo Asset" ],
+  "name": "Unit test template for Showcase",
+  "generatorVersions": "[1.0.0.0-*)",
+  "groupIdentity": "DemoAssets.TestClassTemplate",
+  "precedence": "100",
+  "identity": "DemoAssets.TestClassTemplate",
+  "shortName": "demo-test-class",
+  "sourceName": "UnitTest1",
+  "tags": {
+    "language": "C#",
+    "type": "item"
+  },
+  "symbols": {
+    "DefaultNamespace": {
+      "type": "bind",
+      "binding": "msbuild:RootNamespace",
+      "replaces": "%NAMESPACE%"
+    },
+    "TargetFramework": {
+      "type": "bind",
+      "binding": "msbuild:TargetFramework"
+    },
+    "net6orLater": {
+      "type": "generated",
+      "generator": "regexMatch",
+      "datatype": "bool",
+      "parameters": {
+        "pattern": "^(net6.0|net7.0)$",
+        "source": "TargetFramework"
+      }
+    }
+  },
+  "constraints": {
+    "csharp-only": {
+      "type": "project-capability",
+      "args": "CSharp + TestContainer"
+    }
+  }
+}

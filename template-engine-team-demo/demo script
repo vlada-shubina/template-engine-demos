@@ -1,0 +1,54 @@
+- show case standard console
+-- go to Projects
+-- dotnet new console
+
+- show case my console (mention System.CommandLine, pack as tool etc)
+-- cd ..\templates\    
+-- dotnet run -- --help
+-- dotnet run
+-- dotnet run --sample Moon
+
+- create the template
+-- dotnet new template.json
+-- show template config, show intellisense
+-- copy-paste real config, go through it
+
+- show case results of template 
+-- dotnet new install .
+-- cd ../../projects
+-- cd MyConsole
+-- dotnet new real-console --name MyConsole
+-- show contents
+-- dotnet run
+-- dotnet new real-console --help
+-- cd ..
+-- dotnet new real-console --name MyConsole2 --CommandName Fabulous --OptionName Great 
+-- show contents
+-- dotnet run -- --help
+-- dotnet run --great Moon
+
+
+- item template
+-- cd ..\..\templates\CommandItem\ 
+-- dotnet new install .
+- cd ..\..\projects\MyConsole2\
+-- dotnet new command-item --name Awesome --OptionName Good 
+-- show file
+-- add file to program.cs
+-- dotnet run -- --help
+-- dotnet run --  awesome-command --help 
+-- dotnet run --  awesome-command --good Earth 
+
+
+- package 
+-- cd ..\..\package\  
+-- dotnet new templatepack --name RealConsoleTemplate  
+-- show project
+-- copy templates
+-- dotnet pack
+-- dotnet new uninstall C:\Users\vshubina\source\demo\template-engine-team-demo\templates\RealConsole
+-- dotnet new uninstall C:\Users\vshubina\source\demo\template-engine-team-demo\templates\CommandItem
+-- dotnet new install bin\Debug\RealConsoleTemplate.1.0.0.nupkg 
+-- dotnet new list real
+
+- show template in Visual Studio

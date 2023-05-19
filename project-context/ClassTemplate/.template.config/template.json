@@ -1,0 +1,41 @@
+{
+  "author": "Demo Asset",
+  "classifications": [ "Demo Asset" ],
+  "name": "Class template for Showcase",
+  "generatorVersions": "[1.0.0.0-*)",
+  "groupIdentity": "DemoAssets.ClassTemplate",
+  "precedence": "100",
+  "identity": "DemoAssets.ClassTemplate",
+  "shortName": "demo-class",
+  "sourceName": "Class1",
+  "tags": {
+    "language": "C#",
+    "type": "item"
+  },
+  "symbols": {
+    "DefaultNamespace": {
+      "type": "bind",
+      "binding": "msbuild:RootNamespace",
+      "replaces": "%NAMESPACE%"
+    },
+    "TargetFramework": {
+      "type": "bind",
+      "binding": "msbuild:TargetFramework"
+    },
+    "net6orLater": {
+      "type": "generated",
+      "generator": "regexMatch",
+      "datatype": "bool",
+      "parameters": {
+        "pattern": "^(net6.0|net7.0)$",
+        "source": "TargetFramework"
+      }
+    }
+  },
+  "constraints": {
+    "csharp-only": {
+      "type": "project-capability",
+      "args": "CSharp"
+    }
+  }
+}
